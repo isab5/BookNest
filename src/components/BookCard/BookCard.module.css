@@ -1,0 +1,29 @@
+.card {
+    width: 17rem;
+    background-color: #F2F1E9;
+    backdrop-filter: blur(8px);
+    padding: 1.5rem;
+    border-radius: 0.7rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    opacity: 0.8;
+    color: black;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.avatar {
+    width: 125px;
+    border-radius: 50%;
+    border: 1px solid rgb(81, 55, 92);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
