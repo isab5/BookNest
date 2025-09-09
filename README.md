@@ -1,36 +1,142 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 BookNest – Frontend
 
-## Getting Started
+Este repositório contém a interface do usuário do **BookNest**, uma aplicação para explorar e gerenciar livros.  
+⚠️ **Importante:** para que a aplicação funcione corretamente, é necessário também rodar o **backend localmente**.
 
-First, run the development server:
+---
 
+## 🚀 Pré-requisitos
+
+Antes de começar, você precisa ter instalado na sua máquina:
+
+- [Node.js](https://nodejs.org/) (versão LTS recomendada)
+- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+- [Git](https://git-scm.com/)
+- [Backend do BookNest](https://github.com/isab5/API-BookNest.git)
+
+---
+
+## 📦 Clonando o projeto
+
+### Clone o repositório do frontend
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/isab5/BookNest.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Entre na pasta do projeto
+```bash
+cd BookNest
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# ⚙️ Instalação do Back-End
 
-## Learn More
+Instale as dependências do projeto:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+Copiar código
+# Usando npm
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# ou usando yarn
+yarn install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 🔗 Configuração do Backend
+A aplicação depende do backend para funcionar.
+Siga os passos abaixo para rodar a API localmente:
 
-## Deploy on Vercel
+1. Abrir terminal/CMD
+```bash
+# Windows: Win + R → cmd
+# macOS: Cmd + Space → Terminal
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. Navegar para o Desktop:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+cd Desktop
+```
+
+3. Crie a pasta:
+
+```bash
+mkdir API-BookNest
+```
+
+4. Entre na pasta do backend:
+
+```bash
+cd API-BookNest
+```
+
+5. Clone o repositório do backend:
+
+```bash
+git clone https://github.com/isab5/API-BookNest.git
+```
+
+6. Abrir VS Code
+```bash
+code .
+```
+
+7. Instale as dependências e rode o servidor (ajuste conforme o backend usa):
+
+```bash
+npm install
+```
+8.  Testar Projeto
+```bash
+npm run dev
+```
+
+O servidor será iniciado em algo como:
+
+http://localhost:3001
+
+⚠️ Deixe o backend rodando em um terminal separado antes de iniciar o frontend.
+
+▶️ Rodando o Frontend
+Depois que o backend estiver rodando, inicie o frontend:
+
+```bash
+Copiar código
+# Usando npm
+npm run dev
+# ou usando yarn
+yarn dev
+```
+
+A aplicação estará disponível em:
+👉 http://localhost:3000
+
+🛠️ Tecnologias utilizadas
+Next.js – Framework React
+
+Axios – Requisições HTTP
+
+
+📚 Estrutura do Projeto
+bash
+Copiar código
+BookNest/
+├── app/              # Páginas e rotas do Next.js
+├── components/       # Componentes reutilizáveis
+├── styles/           # Estilos globais
+└── ...
+
+# 🤝 Contribuição
+Contribuições são bem-vindas!
+Siga os passos:
+
+Faça um fork do projeto
+
+Crie uma branch (git checkout -b minha-feature)
+
+Commit suas alterações (git commit -m 'feat: minha nova feature')
+
+Envie para o repositório (git push origin minha-feature)
+
+Abra um Pull Request
+
