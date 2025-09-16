@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "../components/Header/Header";
 
 const inter = localFont({
     src: [
@@ -30,7 +31,10 @@ export default function RootLayout({ children }) {
     return (
         <html lang="pt-BR" className={inter.variable}>
             <body className={inter.className}>
-                <main>{children}</main>
+                <main>
+                    <Header />
+                    {children}
+                </main>
             </body>
         </html>
     );

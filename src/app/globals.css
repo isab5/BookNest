@@ -4,6 +4,16 @@
   margin: 0;
 }
 
+:root {
+  --color-dark: #2B1D01;
+  /* Variações complementares */
+  --color-highlight: #C9A66B; /* tom dourado suave */
+  --color-leaf: #6B8E23;      /* verde folha */
+  --color-wood: #8B5A2B;      /* marrom amadeirado */
+  --color-light: #F5E6CC;     /* bege claro para contraste */
+  --color-accent: #3E7C59;    /* verde mais forte de destaque */
+}
+
 .font-inter-regular {
     font-family: var(--font-inter);
     font-weight: 400;
