@@ -1,18 +1,36 @@
-import styles from "./BookCard.module.css";
 import Image from "next/image";
+import styles from "./BookCard.module.css";
 
-export default function BookCard({book, onClick }) {
-    console.log("Teste", book.cover_url);
-    
+export default function BookCard({ book, onClick }) {
+    // Fallbacks for missing book data
+    const displayedTitle = book.title || "Título não informado";
+    const displayedSummary = book.summary || "Resumo não informado";
+    const displayedAuthor = book.author_name || "Autor não informado";
+    const displayedGenre = book.genre || "Gênero não informado";
+    const displayedPages = book.pages ? `${book.pages} páginas` : "Páginas não informadas";
+    const displayedPrice = book.price ? `R$ ${book.price}` : "Preço não informado";
+    const displayedCover = book.cover_url || "/placeholder.jpg";
+
     return (
         <div className={styles.card} onClick={onClick}>
-            <Image src={book.cover_url || "/placeholder.jpg"} 
-            className={styles.url} alt={book.title} width={150} height={200} />
-            <h3 className={styles.title}>{book.title}</h3>
-            <p>{book.summary}</p>
-            <p>{book.author}</p>
-            <p>{book.genre}</p>
-            <p>{book.pages}</p>
+            <div className={styles.imageCard}>
+                <Image
+                    src={displayedCover}
+                    alt={displayedTitle}
+                    width={150}
+                    height={200}
+                    loading="lazy"
+                    className={styles.image}
+                />
+            </div>
+            <div className={styles.info}>
+                <h3 className={styles.title}>{displayedTitle}</h3>
+                <p className={styles.summary}>{displayedSummary}</p>
+                <p className={styles.author}>{displayedAuthor}</p>
+                <p className={styles.genre}>{displayedGenre}</p>
+                <p className={styles.pages}>{displayedPages}</p>
+                <p className={styles.price}>{displayedPrice}</p>
+            </div>
         </div>
     );
 }
