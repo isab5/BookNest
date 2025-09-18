@@ -1,8 +1,76 @@
-.bookList {
+.page {
+    min-height: 100vh;
+    background: #faf6f1;
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    padding: 0;
+}
+
+.carouselContainer {
+    width: 100%;
+    max-width: 760px;
+    margin: 2.5rem auto 1.5rem auto;
+    border-radius: 1.3rem;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(150, 120, 80, 0.10);
+    background: #fff;
+}
+
+.carouselImage {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.carouselSlide {
+    position: relative;
+}
+
+.carouselCaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1.3rem 1.5rem 1.7rem 1.5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.52) 100%);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: 0 0 1.3rem 1.3rem;
+    text-shadow: 0 2px 10px #0007;
+}
+
+.infoCard {
+    background: #fff;
+    max-width: 720px;
+    margin: 2.5rem auto 0 auto;
+    padding: 2.3rem 2.1rem 2.1rem 2.1rem;
+    border-radius: 1.1rem;
+    box-shadow: 0 4px 24px rgba(170, 140, 90, 0.09);
+    color: #33250a;
+    font-size: 1.13rem;
+    line-height: 1.7;
+}
+
+.infoCard h2 {
+    margin-top: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    color: #a47843;
+}
+
+.infoCard h3 {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+    color: #b8924c;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+.infoCard p {
+    margin-bottom: 0.6rem;
 }
