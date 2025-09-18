@@ -10,6 +10,7 @@ export default function BookDetails() {
     const [id, setId] = useState(null);
     const [book, setBook] = useState(null);
     const [author, setAuthor] = useState(null);
+    const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         if (!params?.id) return;
@@ -44,6 +45,19 @@ export default function BookDetails() {
         fetchAuthor();
     }, [book]);
 
+    const handleBuy = () => {
+        setShowModal(true);
+    };
+
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
+
+    const handleConfirmPurchase = () => {
+        alert("Purchase confirmed! Thank you for buying.");
+        setShowModal(false);
+    };
+
     if (!book) {
         return <p>Loading or not found.</p>;
     }
@@ -51,15 +65,23 @@ export default function BookDetails() {
     return (
         <div className={styles.page}>
             <div className={styles.bookDetailsContainer}>
-                <Image
-                    className={styles.cover}
-                    src={book.cover_url || "/placeholder.jpg"}
-                    alt={book.title}
-                    width={240}
-                    height={340}
-                    loading="lazy"
-                    style={{ objectFit: "cover", borderRadius: "20px" }}
-                />
+                <div className={styles.imageContainer}>
+                    <Image
+                        className={styles.cover}
+                        src={book.cover_url || "/placeholder.jpg"}
+                        alt={book.title}
+                        width={240}
+                        height={340}
+                        loading="lazy"
+                        style={{ objectFit: "cover", borderRadius: "20px" }}
+                    />
+                    <button
+                        className={styles.buyButton}
+                        onClick={handleBuy}
+                    >
+                        Buy
+                    </button>
+                </div>
                 <div className={styles.infoBlock}>
                     <h1 className={styles.title}>{book.title}</h1>
                     <div className={styles.details}>
@@ -73,6 +95,32 @@ export default function BookDetails() {
                     </div>
                 </div>
             </div>
+
+            {showModal && (
+                <div className={styles.modalOverlay} onClick={handleCloseModal}>
+                    <div className={styles.modal} onClick={e => e.stopPropagation()}>
+                        <button className={styles.closeModal} onClick={handleCloseModal}>×</button>
+                        <h2>Checkout</h2>
+                        <div className={styles.modalBookInfo}>
+                            <Image
+                                src={book.cover_url || "/placeholder.jpg"}
+                                alt={book.title}
+                                width={120}
+                                height={180}
+                                className={styles.modalCover}
+                            />
+                            <div className={styles.modalDetails}>
+                                <p><strong>Title:</strong> {book.title}</p>
+                                <p><strong>Author:</strong> {book.author_name}</p>
+                                <p><strong>Price:</strong> R$ {book.price}</p>
+                            </div>
+                        </div>
+                        <button className={styles.confirmButton} onClick={handleConfirmPurchase}>
+                            Confirm Purchase
+                        </button>
+                    </div>
+                </div>
+            )}
 
             {author && (
                 <div className={styles.authorContainer}>

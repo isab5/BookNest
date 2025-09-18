@@ -1,9 +1,4 @@
-"use client";
-import { useState, useEffect } from "react";
-import axios from "axios";
-import Image from "next/image";
 import styles from "./page.module.css";
-import BookCard from "../components/BookCard/BookCard";
 
 export default function Home() {
   return (

@@ -1,12 +1,12 @@
 import Image from "next/image";
 import styles from "./BookCard.module.css";
 
-export default function BookCard({ book, onClick }) {
+export default function BookCard({ book, children, onClick }) {
     // Fallbacks for missing book data
     const displayedTitle = book.title || "Título não informado";
     const displayedSummary = book.summary || "Resumo não informado";
     const displayedAuthor = book.author_name || "Autor não informado";
-    const displayedGenre = book.genre || "Gênero não informado";
+    const displayedGenre = book.genre || "Gênero não inform ado";
     const displayedPages = book.pages ? `${book.pages} páginas` : "Páginas não informadas";
     const displayedPrice = book.price ? `R$ ${book.price}` : "Preço não informado";
     const displayedCover = book.cover_url || "/placeholder.jpg";
@@ -30,6 +30,7 @@ export default function BookCard({ book, onClick }) {
                 <p className={styles.genre}>{displayedGenre}</p>
                 <p className={styles.pages}>{displayedPages}</p>
                 <p className={styles.price}>{displayedPrice}</p>
+                {children}
             </div>
         </div>
     );
