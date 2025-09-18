@@ -1,0 +1,124 @@
+.footer {
+    width: 100%;
+    background: #19191c;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 3rem 0 2rem 0;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.section {
+    min-width: 11.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.125rem;
+}
+
+.logoArea {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+.logo {
+    width: 3rem;
+    height: 3rem;
+}
+
+.brand {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e7c896;
+    letter-spacing: 0.0625rem;
+}
+
+.slogan {
+    color: #bca477;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.sectionTitle {
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.125rem;
+    border-bottom: 0.1875rem solid #b15a2c;
+    display: inline-block;
+    padding-bottom: 0.125rem;
+    letter-spacing: 0.0625rem;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.section ul li a {
+    color: #bca477;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.section ul li a:hover,
+.section ul li a:focus {
+    color: #e7c896;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.socials a {
+    background: #23232a;
+    border-radius: 50%;
+    width: 2.375rem;
+    height: 2.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bca477;
+    font-size: 1.4rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.socials a:hover {
+    background: #b15a2c;
+    color: #fff;
+}
+
+@media (max-width: 56.25rem) {
+    .footer {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 2rem 0.75rem 1.5rem 0.75rem;
+        border-radius: 0 0 0.9375rem 0.9375rem;
+    }
+
+    .section {
+        margin-bottom: 1.5rem;
+        min-width: unset;
+    }
+
+    .logo {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
+    .brand {
+        font-size: 1.15rem;
+    }
+}

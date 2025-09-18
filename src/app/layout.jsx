@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const inter = localFont({
     src: [
@@ -20,11 +21,11 @@ const inter = localFont({
 });
 
 export const metadata = {
-  title: "BookNest",
-  description: "Your favorite books, all in one place.",
-  icons: {
-    icon: "/icons/books.png",
-  },
+    title: "BookNest",
+    description: "Your favorite books, all in one place.",
+    icons: {
+        icon: "/icons/books.png",
+    },
 };
 
 export default function RootLayout({ children }) {
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
                 <main>
                     <Header />
                     {children}
+                    <Footer />
                 </main>
             </body>
         </html>
