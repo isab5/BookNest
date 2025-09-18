@@ -5,11 +5,15 @@ import Link from "next/link";
 import styles from "./catalog.module.css";
 import BookCard from "../../components/BookCard/BookCard";
 import Image from "next/image";
+import { Pagination } from "antd";
+import "antd/dist/reset.css"; // Import Ant Design base styles (Next.js: use reset.css)
 
 export default function Catalog() {
     const [books, setBooks] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [selectedBook, setSelectedBook] = useState(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const pageSize = 20;
 
     useEffect(() => {
         const fetchBooks = async () => {
@@ -39,11 +43,16 @@ export default function Catalog() {
         setSelectedBook(null);
     };
 
+    // Pagination logic
+    const startIdx = (currentPage - 1) * pageSize;
+    const endIdx = startIdx + pageSize;
+    const paginatedBooks = books.slice(startIdx, endIdx);
+
     return (
         <div className={styles.page}>
             <h1 className={styles.titlePage}>Book catalog</h1>
             <div className={styles.bookList}>
-                {books.map((book) => (
+                {paginatedBooks.map((book) => (
                     <div key={book.id} className={styles.bookCardWrapper}>
                         <Link href={`/catalog/${book.id}`} style={{ textDecoration: "none" }}>
                             <BookCard book={book}>
@@ -61,6 +70,15 @@ export default function Catalog() {
                         </Link>
                     </div>
                 ))}
+            </div>
+            <div style={{ marginTop: "2rem", display: "flex", justifyContent: "center" }}>
+                <Pagination
+                    current={currentPage}
+                    pageSize={pageSize}
+                    total={books.length}
+                    onChange={page => setCurrentPage(page)}
+                    showSizeChanger={false}
+                />
             </div>
 
             {showModal && selectedBook && (
