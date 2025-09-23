@@ -1,20 +1,20 @@
 .page {
     min-height: 100vh;
-    background: #faf6f1;
+    background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0;
+
 }
 
 .carouselContainer {
     width: 100%;
-    max-width: 760px;
+    max-width: 50rem;
     margin: 2.5rem auto 1.5rem auto;
     border-radius: 1.3rem;
     overflow: hidden;
     box-shadow: 0 4px 24px rgba(150, 120, 80, 0.10);
-    background: #fff;
+    background: (--var(--color-background));
 }
 
 .carouselImage {
@@ -44,8 +44,8 @@
 }
 
 .infoCard {
-    background: #fff;
-    max-width: 720px;
+    background-color: #f8ebdd;
+    max-width: 50rem;
     margin: 2.5rem auto 0 auto;
     padding: 2.3rem 2.1rem 2.1rem 2.1rem;
     border-radius: 1.1rem;
@@ -53,6 +53,7 @@
     color: #33250a;
     font-size: 1.13rem;
     line-height: 1.7;
+    margin-bottom: 0;
 }
 
 .infoCard h2 {
@@ -70,6 +71,7 @@
     font-weight: bold;
     margin-bottom: 0.3rem;
 }
+
 
 .infoCard p {
     margin-bottom: 0.6rem;

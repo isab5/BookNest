@@ -1,5 +1,6 @@
 "use client";
 import { Carousel } from "antd";
+import Image from "next/image";
 import styles from "./page.module.css";
 
 const carouselImages = [
@@ -27,7 +28,7 @@ export default function Home() {
         <Carousel autoplay className={styles.carousel}>
           {carouselImages.map((img, idx) => (
             <div key={idx} className={styles.carouselSlide}>
-              <img src={img.url} alt={img.alt} className={styles.carouselImage} />
+              <Image src={img.url} alt={img.alt} className={styles.carouselImage} width={200} height={320} />
               <div className={styles.carouselCaption}>{img.caption}</div>
             </div>
           ))}
