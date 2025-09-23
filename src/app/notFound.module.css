@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    height: 85vh;
+    background: linear-gradient(100deg,  #f3dab0, #C9A66B, #8B5A2B);
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.card img {
+    border-radius: 2rem;
+}
+
+.button {
+    background: #8b4d2b;
+    color: #fff;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem;
+    margin: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #a15a36;
+}
