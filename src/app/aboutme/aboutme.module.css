@@ -1,0 +1,88 @@
+.page {
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoCard {
+    height: 57rem;
+    width: 45rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background: linear-gradient(to bottom, #C9A66B, #f1dfb5);
+    margin: 2rem;
+}
+
+.img {
+    border-radius: 100%;
+}
+
+.infoCard p {
+    color: #2b1d01;
+    text-align: justify;
+    margin: 2rem 1rem;
+}
+
+.infoCard h2 {
+    color: #2b1d01;
+}
+
+.sectionTitle {
+    color: #2b1d01;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-align: justify;
+    margin: 0.5rem;
+}
+
+.section ul li a {
+    color: #bca477;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s;
+}
+
+.section ul li a:hover,
+.section ul li a:focus {
+    color: #e7c896;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem;
+}
+
+.socials a {
+    background: #23232a;
+    border-radius: 50%;
+    width: 2.375rem;
+    height: 2.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bca477;
+    font-size: 1.4rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.socials a:hover {
+    background: #b15a2c;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .infoCard {
+        width: 90%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .infoCard p {
+        margin: 1rem 0.5rem;
+        color: #2b1d01;
+    }
+}
