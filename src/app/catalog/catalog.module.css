@@ -113,3 +113,18 @@
 .confirmButton:focus {
     background: #b68b4c;
 }
+
+@media (max-width: 480px) {
+    .bookCardWrapper {
+        max-width: 20rem;
+        padding-right: 2rem;
+    }
+    .modalBookInfo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .modalDetails {
+        align-items: center;
+    }
+}

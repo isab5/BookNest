@@ -52,3 +52,26 @@
 .nav a:hover {
     color: var(--color-dark); 
 }
+
+@media (max-width: 768px) {
+    .header {
+        height: 45vh;
+        padding: 0;
+    }
+    .container {
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    }
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav ul.active {
+        display: flex;
+    }
+
+    .nav li {
+        margin: 1rem 0;
+    }
+}
