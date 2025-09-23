@@ -10,7 +10,7 @@ export default function Contact() {
                     Se você tiver alguma dúvida, sugestão ou quiser entrar em contato comigo, preencha o formulário abaixo ou envie um e-mail para: 
                 </p>
                 <p>
-                    <a href="mailto:contato@meusite.com">contato@meusite.com</a>
+                    <a href="mailto:contato@meusite.com">isabella.b.rosa6@aluno.senai.br</a>
                 </p>
 
                 <form className={styles.form}>
@@ -31,16 +31,16 @@ export default function Contact() {
                         Você também pode entrar em contato comigo através das minhas redes sociais:
                     </p>
                     <div className={styles.socialIcons}>
-                        <a href="https://instagram.com/seuusuario" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <a href="https://www.instagram.com/isaj333j6?igsh=MWMxd2Q5OGdvOGJiNg==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <FaInstagram />
                         </a>
-                        <a href="https://github.com/seuusuario" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <a href="https://github.com/isab5" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                             <FaGithub />
                         </a>
-                        <a href="https://linkedin.com/in/seuusuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <a href="https://www.linkedin.com/in/isabella-borin-792b222b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                             <FaLinkedin />
                         </a>
-                        <a href="mailto:contato@meusite.com" aria-label="E-mail">
+                        <a href="mailto:isabella.b.rosa6@aluno.senai.br" aria-label="E-mail">
                             <FaEnvelope />
                         </a>
                     </div>

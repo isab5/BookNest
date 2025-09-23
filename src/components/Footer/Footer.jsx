@@ -30,7 +30,7 @@ export default function Footer() {
             <div className={styles.section}>
                 <h4 className={styles.sectionTitle}>Follow Me</h4>
                 <div className={styles.socials}>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><FaInstagram /></a>
+                    <a href="https://www.instagram.com/isaj333j6?igsh=MWMxd2Q5OGdvOGJiNg==" target="_blank" rel="noopener" aria-label="Instagram"><FaInstagram /></a>
                     <a href="https://github.com/isab5" target="_blank" rel="noopener" aria-label="GitHub"><FaGithub /></a>
                     <a href="https://www.linkedin.com/in/isabella-borin-792b222b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener" aria-label="LinkedIn"><FaLinkedin /></a>
                 </div>

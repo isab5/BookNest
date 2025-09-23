@@ -14,7 +14,7 @@
     border-radius: 1.3rem;
     overflow: hidden;
     box-shadow: 0 4px 24px rgba(150, 120, 80, 0.10);
-    background: (--var(--color-background));
+    background: #fff;
 }
 
 .carouselImage {
