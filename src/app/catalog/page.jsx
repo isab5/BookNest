@@ -6,7 +6,8 @@ import styles from "./catalog.module.css";
 import BookCard from "../../components/BookCard/BookCard";
 import Image from "next/image";
 import { Pagination } from "antd";
-import "antd/dist/reset.css"; // Import Ant Design base styles (Next.js: use reset.css)
+import "antd/dist/reset.css"; 
+import { CloseOutlined } from "@ant-design/icons";
 
 export default function Catalog() {
     const [books, setBooks] = useState([]);
@@ -84,8 +85,8 @@ export default function Catalog() {
             {showModal && selectedBook && (
                 <div className={styles.modalOverlay} onClick={handleCloseModal}>
                     <div className={styles.modal} onClick={e => e.stopPropagation()}>
-                        <button className={styles.closeModal} onClick={handleCloseModal}>×</button>
-                        <h2>Checkout</h2>
+                        <button className={styles.closeModal} onClick={handleCloseModal}><CloseOutlined style={{ fontSize: "22px" }}/></button>
+                        <h2 className={styles.modalTitle}>Checkout</h2>
                         <div className={styles.modalBookInfo}>
                             <Image
                                 src={selectedBook.cover_url || "/img/placeholder.png"}

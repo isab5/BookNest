@@ -5,7 +5,7 @@ import axios from "axios";
 import styles from "./[id].module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { LeftOutlined } from "@ant-design/icons";
+import { LeftOutlined, CloseOutlined } from "@ant-design/icons";
 
 export default function BookDetails() {
     const params = useParams();
@@ -104,8 +104,8 @@ export default function BookDetails() {
             {showModal && (
                 <div className={styles.modalOverlay} onClick={handleCloseModal}>
                     <div className={styles.modal} onClick={e => e.stopPropagation()}>
-                        <button className={styles.closeModal} onClick={handleCloseModal}>×</button>
-                        <h2>Checkout</h2>
+                        <button className={styles.closeModal} onClick={handleCloseModal}><CloseOutlined style={{ fontSize: "22px" }}/></button>
+                        <h2 className={styles.modalTitle}>Checkout</h2>
                         <div className={styles.modalBookInfo}>
                             <Image
                                 src={book.cover_url || "/placeholder.jpg"}
