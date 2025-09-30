@@ -52,7 +52,7 @@
 
 .sectionTitle {
     font-size: 1.15rem;
-    color: #b8924c;
+    color: #2b1700;
     font-weight: bold;
     margin-bottom: 0.6rem;
     text-align: center;
@@ -68,7 +68,7 @@
 
 .socials a {
     color: #a47843;
-    transition: color 0.2s;
+    transition: color 0.5s;
 }
 
 .socials a:hover {
