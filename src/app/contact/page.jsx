@@ -5,7 +5,7 @@ export default function Contact() {
     return (
         <div className={styles.page}>
             <div className={styles.infoCard}>
-                <h2>Contato</h2>
+                <h2 className={styles.title}> <strong>Contato</strong></h2>
                 <p>
                     Se você tiver alguma dúvida, sugestão ou quiser entrar em contato comigo, preencha o formulário abaixo ou envie um e-mail para: 
                 </p>

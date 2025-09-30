@@ -18,7 +18,7 @@ export default function Catalog() {
     useEffect(() => {
         const fetchBooks = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/books");
+                const response = await axios.get("http://localhost:4000/api/books");
                 setBooks(response.data);
             } catch (error) {
                 console.log("Failed to fetch books");
@@ -88,7 +88,7 @@ export default function Catalog() {
                         <h2>Checkout</h2>
                         <div className={styles.modalBookInfo}>
                             <Image
-                                src={selectedBook.cover_url || "/placeholder.jpg"}
+                                src={selectedBook.cover_url || "/img/placeholder.png"}
                                 alt={selectedBook.title}
                                 width={120}
                                 height={180}

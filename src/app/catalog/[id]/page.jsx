@@ -22,7 +22,7 @@ export default function BookDetails() {
 
         const fetchBook = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/books/${id}`);
+                const response = await axios.get(`http://localhost:4000/api/books/${id}`);
                 setBook(response.data);
             } catch (error) {
                 setBook(null);
@@ -36,7 +36,7 @@ export default function BookDetails() {
 
         const fetchAuthor = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/authors/${book.author_id}`);
+                const response = await axios.get(`http://localhost:4000/api/authors/${book.author_id}`);
                 setAuthor(Array.isArray(response.data) ? response.data[0] : response.data);
             } catch (error) {
                 setAuthor(null);

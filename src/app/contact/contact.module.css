@@ -7,6 +7,12 @@
     padding: 0;
 }
 
+.title {
+    font-size: 2rem;
+    color: #2b1700;
+    text-align: center;
+}
+
 .infoCard {
     background-color: #f8ebdd;
     max-width: 720px;
