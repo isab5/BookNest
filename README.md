@@ -9,40 +9,73 @@ Este repositório contém a interface do usuário do **BookNest**, uma aplicaç�
 
 Antes de começar, você precisa ter instalado na sua máquina:
 
-- [Node.js](https://nodejs.org/) (versão LTS recomendada)
-- [npm](https://www.npmjs.com/) ou [yarn](https://yarnpkg.com/)
+- [Node.js](https://nodejs.org/) 
+- [npm](https://www.npmjs.com/)
 - [Git](https://git-scm.com/)
 - [Backend do BookNest](https://github.com/isab5/API-BookNest.git)
 
 ---
 
-## 📦 Clonando o projeto
+# 📦 Clonando e Configurando o Frontend
 
-### Clone o repositório do frontend
-```bash
-git clone https://github.com/isab5/BookNest.git
-```
+Siga os passos abaixo para rodar o frontend do BookNest localmente:
 
-### Entre na pasta do projeto
-```bash
-cd BookNest
-```
+1. **Abrir o terminal/CMD**
+    ```bash
+    # Windows: Win + R → cmd
+    # macOS: Cmd + Space → Terminal
+    ```
 
+2. **Navegar para o local onde deseja salvar o projeto (exemplo: Desktop):**
+    ```bash
+    cd Desktop
+    ```
 
-# ⚙️ Instalação do Back-End
+3. **Criar uma pasta para o projeto:**
+    ```bash
+    mkdir BookNest
+    ```
 
-Instale as dependências do projeto:
+4. **Entrar na pasta criada:**
+    ```bash
+    cd BookNest
+    ```
 
-```bash
-Copiar código
-# Usando npm
-npm install
+5. **Clonar o repositório do frontend:**
+    ```bash
+    git clone https://github.com/isab5/BookNest.git .
+    ```
+    > O ponto ao final do comando garante que os arquivos sejam clonados diretamente dentro da pasta BookNest.
 
-# ou usando yarn
-yarn install
-```
+6. **Abrir o projeto no VS Code direto do CMD (opcional):**
+    ```bash
+    code .
+    ```
 
-# 🔗 Configuração do Backend
+7. **Instalar as dependências:**
+    ```bash
+    # Usando npm
+    npm install
+
+    # ou usando yarn
+    yarn install
+    ```
+
+8. **Rodar o servidor de desenvolvimento:**
+    ```bash
+    # Usando npm
+    npm run dev
+
+    # ou usando yarn
+    yarn dev
+    ```
+
+A aplicação estará disponível em:
+👉 http://localhost:3000
+
+> **Dica:** Mantenha o backend rodando em um terminal separado para garantir o funcionamento completo do BookNest.
+
+# 🔗  Instalação e Configuração do Backend
 A aplicação depende do backend para funcionar.
 Siga os passos abaixo para rodar a API localmente:
 
@@ -93,15 +126,15 @@ npm run dev
 
 O servidor será iniciado em algo como:
 
-http://localhost:3001
+http://localhost:3000
 
 ⚠️ Deixe o backend rodando em um terminal separado antes de iniciar o frontend.
 
 ▶️ Rodando o Frontend
 Depois que o backend estiver rodando, inicie o frontend:
 
-```bash
 Copiar código
+```bash
 # Usando npm
 npm run dev
 # ou usando yarn
@@ -111,20 +144,25 @@ yarn dev
 A aplicação estará disponível em:
 👉 http://localhost:3000
 
-🛠️ Tecnologias utilizadas
-Next.js – Framework React
+## 🛠️ Tecnologias utilizadas:
 
-Axios – Requisições HTTP
+<li> Next.js – Framework React
+<li>Axios – Requisições HTTP
+<li>Ant Design – Requisições HTTP
 
+## 📚 Estrutura do Projeto
 
-📚 Estrutura do Projeto
-bash
-Copiar código
+Copiar código:
+```bash
 BookNest/
-├── app/              # Páginas e rotas do Next.js
-├── components/       # Componentes reutilizáveis
-├── styles/           # Estilos globais
+├── public/           # Arquivos estáticos (imagens, favicon, etc)
+├── app/              # Páginas e rotas (Next.js App Router)
+│   ├── page.tsx      # Página inicial
+│   └── ...           # Outras páginas
+├── components/       # Componentes reutilizáveis (ex: Header, Footer, BookCard)    
+├── README.md
 └── ...
+```
 
 # 🤝 Contribuição
 Contribuições são bem-vindas!
