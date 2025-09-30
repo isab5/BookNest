@@ -4,6 +4,8 @@ import { useParams } from "next/navigation";
 import axios from "axios";
 import styles from "./[id].module.css";
 import Image from "next/image";
+import Link from "next/link";
+import { LeftOutlined } from "@ant-design/icons";
 
 export default function BookDetails() {
     const params = useParams();
@@ -65,10 +67,13 @@ export default function BookDetails() {
     return (
         <div className={styles.page}>
             <div className={styles.bookDetailsContainer}>
+                <Link href="/catalog" className={styles.iconBackButton} aria-label="Back to products">
+                    <LeftOutlined style={{ fontSize: "22px" }} />
+                </Link>
                 <div className={styles.imageContainer}>
                     <Image
                         className={styles.cover}
-                        src={book.cover_url || "/placeholder.jpg"}
+                        src={book.cover_url || "/img/placeholder.jpg"}
                         alt={book.title}
                         width={240}
                         height={340}
