@@ -76,7 +76,8 @@ A aplicação estará disponível em:
 > **Dica:** Mantenha o backend rodando em um terminal separado para garantir o funcionamento completo do BookNest.
 
 # 🔗  Instalação e Configuração do Backend
-A aplicação depende do backend para funcionar.
+A aplicação depende do backend para funcionar. Você também pode seguir o passo-a-passo da instalçao no repositório do back-end: https://github.com/isab5/API-BookNest.git.
+
 Siga os passos abaixo para rodar a API localmente:
 
 1. Abrir terminal/CMD
