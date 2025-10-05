@@ -76,58 +76,13 @@ A aplicação estará disponível em:
 > **Dica:** Mantenha o backend rodando em um terminal separado para garantir o funcionamento completo do BookNest.
 
 # 🔗  Instalação e Configuração do Backend
-A aplicação depende do backend para funcionar. Você também pode seguir o passo-a-passo da instalçao no repositório do back-end: https://github.com/isab5/API-BookNest.git.
-
-Siga os passos abaixo para rodar a API localmente:
-
-1. Abrir terminal/CMD
-```bash
-# Windows: Win + R → cmd
-# macOS: Cmd + Space → Terminal
-```
-
-2. Navegar para o Desktop:
-
-```bash
-cd Desktop
-```
-
-3. Crie a pasta:
-
-```bash
-mkdir API-BookNest
-```
-
-4. Entre na pasta do backend:
-
-```bash
-cd API-BookNest
-```
-
-5. Clone o repositório do backend:
-
-```bash
-git clone https://github.com/isab5/API-BookNest.git
-```
-
-6. Abrir VS Code
-```bash
-code .
-```
-
-7. Instale as dependências e rode o servidor (ajuste conforme o backend usa):
-
-```bash
-npm install
-```
-8.  Testar Projeto
-```bash
-npm run dev
-```
+A aplicação depende do backend para funcionar.
+Para instalar e configurar corretamente, siga os passos detalhados no repositório do back-end: [README.md do repositório do backend](https://github.com/isab5/API-BookNest.git).
+Lá você encontrará todas as instruções necessárias para rodar a API localmente e garantir a integração entre frontend e backend.
 
 O servidor será iniciado em algo como:
 
-http://localhost:3000
+http://localhost:4000 ou http://localhost:5000
 
 ⚠️ Deixe o backend rodando em um terminal separado antes de iniciar o frontend.
 
