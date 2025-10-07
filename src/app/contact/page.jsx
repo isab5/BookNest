@@ -24,10 +24,7 @@ export default function Contact() {
             <div className={styles.infoCard}>
                 <h2 className={styles.title}> <strong>Contato</strong></h2>
                 <p>
-                    Se você tiver alguma dúvida, sugestão ou quiser entrar em contato comigo, preencha o formulário abaixo ou envie um e-mail para:
-                </p>
-                <p>
-                    <a href="mailto:isabella.b.rosa6@aluno.senai.br">isabella.b.rosa6@aluno.senai.br</a>
+                    Se você tiver alguma dúvida, sugestão ou quiser entrar em contato comigo, preencha o formulário abaixo.
                 </p>
 
                 <form className={styles.form}>
