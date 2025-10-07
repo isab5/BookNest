@@ -1,29 +1,46 @@
+'use client';
+import { useState } from "react";
 import styles from "./contact.module.css";
 import { FaInstagram, FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Contact() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        toast.success('Enviado com sucesso!');
+        setName('');
+        setEmail('');
+        setMessage('');
+    };
+
     return (
         <div className={styles.page}>
+            <ToastContainer position="top-right" autoClose={4000} />
             <div className={styles.infoCard}>
                 <h2 className={styles.title}> <strong>Contato</strong></h2>
                 <p>
-                    Se você tiver alguma dúvida, sugestão ou quiser entrar em contato comigo, preencha o formulário abaixo ou envie um e-mail para: 
+                    Se você tiver alguma dúvida, sugestão ou quiser entrar em contato comigo, preencha o formulário abaixo ou envie um e-mail para:
                 </p>
                 <p>
-                    <a href="mailto:contato@meusite.com">isabella.b.rosa6@aluno.senai.br</a>
+                    <a href="mailto:isabella.b.rosa6@aluno.senai.br">isabella.b.rosa6@aluno.senai.br</a>
                 </p>
 
                 <form className={styles.form}>
                     <label htmlFor="name">Nome:</label>
-                    <input type="text" id="name" name="name" required />
+                    <input type="text" value={name} id="name" name="name" placeholder="Digite seu nome..." onChange={e => setName(e.target.value)} required />
 
                     <label htmlFor="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required />
+                    <input type="email" id="email" name="email" value={email} placeholder="Digite seu e-mail..." onChange={e => setEmail(e.target.value)} required />
 
                     <label htmlFor="message">Mensagem:</label>
-                    <textarea id="message" name="message" rows="5" required />
+                    <textarea id="message" name="message" rows="5" value={message} placeholder="Digite sua mensagem..." onChange={e => setMessage(e.target.value)} required />
 
-                    <button type="submit">Enviar</button>
+                    <button onClick={handleSubmit} type="submit">Enviar</button>
                 </form>
 
                 <div className={styles.socialSection}>

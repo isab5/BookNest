@@ -9,6 +9,7 @@ import { Pagination } from "antd";
 import "antd/dist/reset.css"; 
 import { CloseOutlined } from "@ant-design/icons";
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Catalog() {
     const [books, setBooks] = useState([]);

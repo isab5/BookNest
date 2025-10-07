@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LeftOutlined, CloseOutlined } from "@ant-design/icons";
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function BookDetails() {
     const params = useParams();

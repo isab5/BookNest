@@ -28,13 +28,12 @@
 .form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
     margin-bottom: 1.7rem;
 }
 
 .form label {
     font-weight: 500;
-    margin-bottom: 0.2rem;
+    margin-top: 0.2rem;
 }
 
 .form input,
@@ -44,6 +43,7 @@
     border: 1px solid #d6cfc2;
     font-size: 1rem;
     font-family: inherit;
+    margin-bottom: 1rem;
 }
 
 .form input:focus,
