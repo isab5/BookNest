@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Pagination } from "antd";
 import "antd/dist/reset.css"; 
 import { CloseOutlined } from "@ant-design/icons";
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function Catalog() {
     const [books, setBooks] = useState([]);
@@ -39,18 +40,18 @@ export default function Catalog() {
     };
 
     const handleConfirmPurchase = () => {
-        alert("Purchase confirmed! Thank you for buying.");
+        toast.success("Purchase confirmed!Thank you for buying.");
         setShowModal(false);
         setSelectedBook(null);
     };
 
-    // Pagination logic
     const startIdx = (currentPage - 1) * pageSize;
     const endIdx = startIdx + pageSize;
     const paginatedBooks = books.slice(startIdx, endIdx);
 
     return (
         <div className={styles.page}>
+            <ToastContainer position="top-right" autoClose={4000} />
             <h1 className={styles.titlePage}>Book catalog</h1>
             <div className={styles.bookList}>
                 {paginatedBooks.map((book) => (

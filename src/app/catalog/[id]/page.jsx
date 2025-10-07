@@ -6,6 +6,7 @@ import styles from "./[id].module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { LeftOutlined, CloseOutlined } from "@ant-design/icons";
+import { ToastContainer, toast } from 'react-toastify';
 
 export default function BookDetails() {
     const params = useParams();
@@ -13,6 +14,7 @@ export default function BookDetails() {
     const [book, setBook] = useState(null);
     const [author, setAuthor] = useState(null);
     const [showModal, setShowModal] = useState(false);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         if (!params?.id) return;
@@ -28,6 +30,8 @@ export default function BookDetails() {
                 setBook(response.data);
             } catch (error) {
                 setBook(null);
+            } finally {
+                setLoading(false);
             }
         };
         fetchBook();
@@ -56,7 +60,7 @@ export default function BookDetails() {
     };
 
     const handleConfirmPurchase = () => {
-        alert("Purchase confirmed! Thank you for buying.");
+        toast.success("Purchase confirmed! Thank you for buying.");
         setShowModal(false);
     };
 
@@ -66,6 +70,7 @@ export default function BookDetails() {
 
     return (
         <div className={styles.page}>
+            <ToastContainer position="top-right" autoClose={4000} />
             <div className={styles.bookDetailsContainer}>
                 <Link href="/catalog" className={styles.iconBackButton} aria-label="Back to products">
                     <LeftOutlined style={{ fontSize: "22px" }} />
