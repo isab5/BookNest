@@ -20,7 +20,7 @@
     border-radius: 1rem;
     box-shadow: 0 4px 32px rgba(80,80,80,0.09);
     padding: 2.5rem 2rem;
-    max-width: 60rem;
+    max-width: 80vw;
     width: 100%;
     position: relative;
 }
@@ -122,7 +122,7 @@
     display: flex;
     gap: 2.5rem;
     align-items: center;
-    max-width: 60rem;
+    max-width: 80vw;
 }
 
 .authorPhoto {
@@ -272,10 +272,12 @@
         max-width: 80vw;
     }
     .authorPhoto {
-        width: 95%;
-        height: 40vh;
+        width: 40vw;
+        height: 50vh;
         border-radius: 1rem;
         align-items: center;
+        justify-content: center;
+        align-self: center;
     }
     .authorName {
         font-size: 1.5rem;
