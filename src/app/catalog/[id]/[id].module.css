@@ -272,8 +272,8 @@
         max-width: 80vw;
     }
     .authorPhoto {
-        width: 12rem;
-        height: 12rem;
+        width: 95%;
+        height: 40vh;
         border-radius: 1rem;
         align-items: center;
     }
